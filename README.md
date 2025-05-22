@@ -20,15 +20,28 @@ Beam Chain is Ethereum's ambitious multi-year initiative to revamp the consensus
 
 ```
 beamlight/
-├── cmd/              # Command-line applications
-│   └── beamlight/    # Main application entry point
-├── internal/         # Private application code
-│   ├── config/       # Configuration handling
-│   ├── consensus/    # Consensus implementation
-│   ├── core/         # Core blockchain functionality
-│   ├── p2p/          # P2P networking
-│   └── state/        # State management
-└── pkg/              # Public libraries that can be used by external applications
+├── cmd/                      # Command-line applications
+│   └── beamlight/            # Main application entry point
+├── internal/                 # Private application code
+│   ├── beacon/               # Core beacon chain functionality
+│   ├── config/               # Configuration handling
+│   │   ├── flags/            # CLI flags handling
+│   │   └── params/           # Network parameters
+│   ├── consensus/            # Consensus implementation
+│   ├── crypto/               # Cryptographic primitives
+│   ├── database/             # Database abstractions
+│   ├── node/                 # Node service orchestration
+│   ├── p2p/                  # P2P networking
+│   ├── rpc/                  # RPC implementations
+│   └── zk/                   # ZK-related functionality
+│       └── stf/              # State transition function (ZK-friendly)
+├── pkg/                      # Public libraries for external use
+├── api/                      # API definitions
+├── build/                    # Build-related files
+├── docs/                     # Documentation
+├── scripts/                  # Helper scripts
+├── test/                     # Tests
+└── tools/                    # Development tools
 ```
 
 ## Goals
